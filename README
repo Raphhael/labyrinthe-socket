@@ -1,0 +1,31 @@
+# labyrinthe-socket
+
+Serveur et client d'un jeu de labyrinthe réseau.
+
+- Labyrinthes stockés dans la BDD, accès via SQL embarqué : ECPG
+- Possibilité de créer une partie
+- De rejoindre une partie
+- Plusieurs personnent peuvent observer une partie
+- Voir l'historique des joueurs, parties terminées
+- Protocole applicatif créé avec les sockets pour la communication
+- Interface avec Ncurses
+- Importer des labyrinthes d'un fichier texte dans la BDD
+- Serveur multi-threadé
+
+Commandes du Makefile dans le répertoire courant . :
+        - $ make client : compilation du client
+        - $ make serveur: compilation du serveur
+        - $ make import : compilation de l'outil d'import de labyrinthe
+        - $ make all -B : recompilation de tout
+
+Les executables sont dans le répertoire : ./bin
+Le code source est dans le répertoire : ./source
+
+Description de la structure des dossier de ./source :
+        ./source/bdd/    : fichiers necessitant une pré-compilation ECPG
+        ./source/client/ : client
+        ./source/serveur/: serveur
+        ./source/mtp/    : tout ce qui concerne le protocole MTP
+        ./source/import/ : outil d'import de labyrinthe
+
+
